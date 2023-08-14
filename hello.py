@@ -11,6 +11,18 @@ class RPS(Enum):
 
 playagain = True
 
+dict = {
+    '11': 'Draw',
+    '12': 'Lose',
+    '13': 'Win',
+    '21': 'Win',
+    '22': 'Draw',
+    '23': 'Lose',
+    '31': 'Lose',
+    '32': 'Win',
+    '33': 'Draw'
+}
+
 while playagain:
     value = input('\nEnter a value:\n1.rock\n2.paper\n3.scissors\n')
     player = int(value)
@@ -23,29 +35,9 @@ while playagain:
     print("You chose " + str(RPS(player)).replace('RPS.', '') + ".")
     print("CPU chose " + str(RPS(computer)).replace('RPS.', '') + ".")
 
-    result = ''
-
-    if player == computer:
-        result = 'Draw'
-    else:
-        if player == 1:
-            if computer == 2:
-                result = 'Lose'
-            else:
-                result = 'Win'
-        elif player == 2:
-            if computer == 1:
-                result = 'Win'
-            else:
-                result = 'Lose'
-        else:
-            if computer == 1:
-                result = 'Lose'
-            else:
-                result = 'Win'
+    result = dict[f'{player}{computer}']
 
     print('The result is: ' + result + '.')
-    print(RPS(2).value)
 
     playagain = input("\nPlay again?\nPress Y for 'Yes'.\nPress X for 'No'.\n")
 
