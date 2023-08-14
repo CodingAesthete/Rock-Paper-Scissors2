@@ -25,27 +25,24 @@ while playagain:
 
     result = ''
 
-    if player == 1:
-        if computer == 1:
-            result = 'Draw'
-        elif computer == 2:
-            result = 'Lose'
-        else:
-            result = 'Win'
-    elif player == 2:
-        if computer == 1:
-            result = 'Win'
-        elif computer == 2:
-            result = 'Draw'
-        else:
-            result = 'Lose'
+    if player == computer:
+        result = 'Draw'
     else:
-        if computer == 1:
-            result = 'Lose'
-        elif computer == 2:
-            result = 'Win'
+        if player == 1:
+            if computer == 2:
+                result = 'Lose'
+            else:
+                result = 'Win'
+        elif player == 2:
+            if computer == 1:
+                result = 'Win'
+            else:
+                result = 'Lose'
         else:
-            result = 'Draw'
+            if computer == 1:
+                result = 'Lose'
+            else:
+                result = 'Win'
 
     print('The result is: ' + result + '.')
     print(RPS(2).value)
