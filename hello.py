@@ -12,15 +12,9 @@ class RPS(Enum):
 playagain = True
 
 dict = {
-    '11': 'Draw',
-    '12': 'Lose',
-    '13': 'Win',
-    '21': 'Win',
-    '22': 'Draw',
-    '23': 'Lose',
-    '31': 'Lose',
-    '32': 'Win',
-    '33': 'Draw'
+    '11': 'Draw', '12': 'Lose', '13': 'Win',
+    '21': 'Win', '22': 'Draw', '23': 'Lose',
+    '31': 'Lose', '32': 'Win', '33': 'Draw'
 }
 
 while playagain:
